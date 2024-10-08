@@ -1,0 +1,4 @@
+The cloud function definition can be mapped one-to-one to a function declared in your application, or you can
+use the pipe (|) operator to compose functions together in a data flow. If you need to
+define multiple functions, you can use the semicolon (;) character as the separator
+instead of the pipe (|)
