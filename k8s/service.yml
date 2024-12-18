@@ -1,0 +1,22 @@
+apiVersion: v1
+#type of object will be created
+kind: Service
+metadata:
+  #The name of the Service; it must be a valid DNS name
+  name: dispatcher-service
+  #A label attached to the Service
+  labels:
+    app: dispatcher-service
+spec:
+  #The type of Service
+  type: ClusterIP
+  selector:
+    # The label used to match the Pods to target and expose
+    app: dispatcher-service
+  ports:
+    #The network protocol used by the Service
+    - protocol: TCP
+      #The port expose by the Service
+      port: 80
+      #The port exposed by the Pods targeted by the Service
+      targetPort: 9003
